@@ -1,0 +1,1183 @@
+---
+title: "Mi Informe"
+author: "Kenner"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  html_document: default
+---
+
+# Manual de Usuario - Course Platform
+
+## Project Information
+
+Project Name: Course Platform
+
+Name: Kenner De Jesus Palma Rivadeneira
+
+Course: Systems Engineering - Database II
+
+Semester:2025-2 Date:20/11/2025
+
+Instructor: Jaider Jose Quintero Mendoza
+
+## Tabla de Contenidos
+
+1.  Introducción
+
+2.  Estructura de la Plantilla Base
+
+3.  Módulo de Profesores (Teachers)
+
+4.  Módulo de Estudiantes (Students)
+
+5.  Módulo de Cursos (Courses)
+
+6.  Módulo de Módulos (Modules)
+
+7.  Módulo de Lecciones (Lessons)
+
+8.  Módulo de Evaluaciones (Evaluations)
+
+9.  Módulo de Intentos (Attempts)
+
+10. Módulo de Entregas (Deliveries)
+
+11. Módulo de Entregas de Estudiantes (Student Deliveries)
+
+12. Módulo de Inscripciones (Registrations)
+
+13. Módulo de Etiquetas (Tags)
+
+14. Módulo de Foros (Forums)
+
+15. Módulo de Publicaciones (Posts)
+
+## 1. Introducción
+
+Este manual describe cómo usar Course Platform para gestionar contenido educativo.
+
+Objetivos:
+
+-   Explicar la interfaz
+
+<!-- -->
+
+-   Mostrar cómo realizar operaciones CRUD
+
+<!-- -->
+
+-   Guiar el uso de cada módulo
+
+Requisitos previos:
+
+-   Acceso a la aplicación
+
+<!-- -->
+
+-   Conocimientos básicos de navegación web
+
+## 2. Estructura de la Plantilla Base
+
+La aplicación tiene cuatro áreas:
+
+1.  Header (Encabezado)
+
+-   Muestra el título
+
+<!-- -->
+
+-   Ubicado en la parte superior
+
+1.  Aside (Menú lateral)
+
+-   Panel izquierdo con menú desplegable
+
+<!-- -->
+
+-   Navegación entre módulos
+
+1.  Content (Área de contenido)
+
+-   Muestra el módulo seleccionado
+
+<!-- -->
+
+-   Tablas, formularios y acciones
+
+1.  Footer (Pie de página)
+
+-   Información de la aplicación
+
+<!-- -->
+
+-   Ubicado en la parte inferior
+
+### Captura 2.1: Vista general de la plantilla base
+
+![](images/clipboard-1307677501.png)
+
+Descripción:
+
+-   El header está en la parte superior
+
+<!-- -->
+
+-   El menú lateral (Aside) muestra todas las opciones
+
+<!-- -->
+
+-   El área central muestra el contenido seleccionado
+
+<!-- -->
+
+-   El footer aparece en la parte inferior
+
+### Captura 2.2: Menú de navegación lateral (Aside)
+
+![](images/clipboard-3482729297.png)
+
+Descripción:
+
+El menú lateral permite acceder a:
+
+-   Teachers
+
+<!-- -->
+
+-   Students
+
+<!-- -->
+
+-   Courses
+
+<!-- -->
+
+-   Modules
+
+<!-- -->
+
+-   Lessons
+
+<!-- -->
+
+-   Evaluations
+
+<!-- -->
+
+-   Attempts
+
+<!-- -->
+
+-   Deliveries
+
+<!-- -->
+
+-   Student Deliveries
+
+<!-- -->
+
+-   Registrations
+
+<!-- -->
+
+-   Tags
+
+<!-- -->
+
+-   Forums
+
+<!-- -->
+
+-   Posts
+
+## 3. Módulo de Profesores (Teachers)
+
+Permite gestionar profesores.
+
+### 3.1 Listar Profesores (Getall)
+
+Acceso: Menú lateral → Teachers
+
+Funcionalidad:
+
+-   Muestra lista en tabla
+
+<!-- -->
+
+-   Permite ordenar por columnas
+
+<!-- -->
+
+-   Paginación (5, 10, 25, 50 registros)
+
+<!-- -->
+
+-   Botón "Nuevo Profesor"
+
+#### Captura 3.1.1: Vista de listado de profesores
+
+![](images/clipboard-2751651335.png)
+
+Elementos:
+
+-   Tabla con datos
+
+<!-- -->
+
+-   Botón "Nuevo Profesor" (verde, esquina superior derecha)
+
+<!-- -->
+
+-   Botones de acción: Editar (lápiz), Eliminar (papelera)
+
+<!-- -->
+
+-   Controles de paginación
+
+### 3.2 Crear Profesor (Create)
+
+Acceso: Botón "Nuevo Profesor" o ruta /teachers/new
+
+Funcionalidad:
+
+-   Formulario con campos:
+
+<!-- -->
+
+-   Nombre (obligatorio)
+
+<!-- -->
+
+-   Apellido (obligatorio)
+
+<!-- -->
+
+-   Email (obligatorio)
+
+<!-- -->
+
+-   Teléfono (opcional)
+
+<!-- -->
+
+-   Especialidad (obligatorio)
+
+<!-- -->
+
+-   Biografía (obligatorio)
+
+<!-- -->
+
+-   URL de Foto (opcional)
+
+<!-- -->
+
+-   Botones: "Guardar" y "Cancelar"
+
+#### Captura 3.2.1: Formulario de creación de profesor
+
+![](images/clipboard-1582547950.png)
+
+#### Captura 3.2.2: Formulario con datos ingresados
+
+![](images/clipboard-2212489401.png)
+
+#### Captura 3.2.3: Mensaje de éxito después de crear
+
+![](images/clipboard-3422027993.png)
+
+Proceso:
+
+1.  Llenar campos
+
+<!-- -->
+
+1.  Clic en "Guardar"
+
+<!-- -->
+
+1.  Verificación de validación
+
+<!-- -->
+
+1.  Redirección a la lista o mensaje de éxito
+
+### 3.3 Editar Profesor (Update)
+
+Acceso: Botón de editar (lápiz) en la fila del profesor
+
+Funcionalidad:
+
+-   Carga datos actuales
+
+<!-- -->
+
+-   Permite modificar campos
+
+<!-- -->
+
+-   Guarda cambios
+
+#### Captura 3.3.1: Formulario de edición con datos cargados
+
+![](images/clipboard-3278390294.png)
+
+#### Captura 3.3.2: Formulario con modificaciones
+
+![](images/clipboard-1241881457.png)
+
+#### Captura 3.3.3: Mensaje de éxito después de actualizar
+
+![](images/clipboard-2863110715.png)
+
+Proceso:
+
+1.  Clic en editar
+
+<!-- -->
+
+1.  Modificar campos
+
+<!-- -->
+
+1.  Clic en "Guardar"
+
+<!-- -->
+
+1.  Confirmación de actualización
+
+### 3.4 Eliminar Profesor (Delete)
+
+Acceso: Botón eliminar (papelera) en la fila del profesor
+
+Funcionalidad:
+
+-   Muestra diálogo de confirmación
+
+<!-- -->
+
+-   Elimina el registro
+
+<!-- -->
+
+-   Actualiza la lista
+
+#### Captura 3.4.1: Diálogo de confirmación de eliminación
+
+![](images/clipboard-1987356421.png)
+
+#### Captura 3.4.2: Mensaje de éxito después de eliminar
+
+![](images/clipboard-3033206553.png)
+
+Proceso:
+
+1.  Clic en eliminar
+
+<!-- -->
+
+1.  Confirmar en el diálogo
+
+<!-- -->
+
+1.  El registro se elimina
+
+<!-- -->
+
+1.  Actualización automática de la lista
+
+## 4. Módulo de Estudiantes (Students)
+
+Permite gestionar estudiantes.
+
+### 4.1 Listar Estudiantes (Getall)
+
+Acceso: Menú lateral → Students
+
+#### Captura 4.1.1: Vista de listado de estudiantes
+
+![](images/clipboard-2925614365.png)
+
+Campos: ID, Nombre, Apellido, Email, Teléfono, Estado, Foto
+
+### 4.2 Crear Estudiante (Create)
+
+Acceso: Botón "Nuevo Estudiante"
+
+#### Captura 4.2.1: Formulario de creación de estudiante
+
+![](images/clipboard-2733018266.png)
+
+Campos: Nombre, Apellido, Email, Teléfono, Estado (ACTIVO/INACTIVO/SUSPENDIDO), URL Foto
+
+![](images/clipboard-2408185739.png)
+
+#### Captura 4.2.2: Mensaje de éxito
+
+![](images/clipboard-1660603661.png)
+
+### 4.3 Editar Estudiante (Update)
+
+#### Captura 4.3.1: Formulario de edición
+
+![](images/clipboard-592974666.png)
+
+![](images/clipboard-241930722.png)
+
+### 4.4 Eliminar Estudiante (Delete)
+
+#### Captura 4.4.1: Confirmación de eliminación
+
+![](images/clipboard-2139223689.png)
+
+dar click en si, confirmar
+
+![](images/clipboard-3477154129.png)
+
+## 5. Módulo de Cursos (Courses)
+
+Permite gestionar cursos.
+
+### 5.1 Listar Cursos (Getall)
+
+Acceso: Menú lateral → Courses
+
+#### Captura 5.1.1: Vista de listado de cursos
+
+![](images/clipboard-1190782609.png)
+
+Campos: ID, Título, Descripción, Objetivos, Fecha Creación, Nivel, Precio, Fechas, Requerimientos, Idioma, Estado, Profesor
+
+### 5.2 Crear Curso (Create)
+
+Acceso: Botón "Nuevo Curso"
+
+#### Captura 5.2.1: Formulario de creación de curso
+
+[INSERTAR CAPTURA: Formulario vacío para crear curso]
+
+Campos principales:
+
+-   Título, Descripción, Objetivos
+
+<!-- -->
+
+-   Fecha Inicio, Fecha Fin
+
+<!-- -->
+
+-   Estado: activo/inactivo/archivado
+
+<!-- -->
+
+-   Idioma, Precio
+
+<!-- -->
+
+-   Nivel: básico/intermedio/avanzado
+
+<!-- -->
+
+-   Profesor (selector)
+
+<!-- -->
+
+-   Tags (múltiple selección)
+
+<!-- -->
+
+-   Certificado disponible, Duración estimada
+
+#### Captura 5.2.2: Formulario con datos completados
+
+![](images/clipboard-1070240709.png)[INSERTAR CAPTURA: Formulario con todos los campos llenos]
+
+#### Captura 5.2.3: Mensaje de éxito
+
+![](images/clipboard-3293893619.png)
+
+### 5.3 Editar Curso (Update)
+
+#### Captura 5.3.1: Formulario de edición
+
+![](images/clipboard-2098701482.png)
+
+dar click en guardar.
+
+![](images/clipboard-2990757131.png)
+
+### 5.4 Eliminar Curso (Delete)
+
+#### Captura 5.4.1: Confirmación de eliminación
+
+![](images/clipboard-1725264152.png)
+
+Nota: Al eliminar un curso, se eliminan automáticamente módulos, lecciones y registros relacionados.
+
+## 6. Módulo de Módulos (Modules)
+
+Permite gestionar módulos dentro de cursos.
+
+### 6.1 Listar Módulos (Getall)
+
+Acceso: Menú lateral → Modules
+
+#### Captura 6.1.1: Vista de listado de módulos
+
+![](images/clipboard-1440408563.png)
+
+Campos: ID, Nombre, Descripción, Orden, Duración estimada, Fecha disponible, Curso
+
+### 6.2 Crear Módulo (Create)
+
+#### Captura 6.2.1: Formulario de creación de módulo
+
+![](images/clipboard-3035112967.png)
+
+dar click en guardar.
+
+![](images/clipboard-2521656710.png)
+
+Campos: Nombre, Descripción, Orden, Curso (selector), Duración estimada, Fecha disponible
+
+### 6.3 Editar Módulo (Update)
+
+#### Captura 6.3.1: Formulario de edición
+
+![](images/clipboard-3314890246.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-3945393995.png)
+
+### 6.4 Eliminar Módulo (Delete)
+
+#### Captura 6.4.1: Confirmación de eliminación
+
+![](images/clipboard-2930753326.png)
+
+Dar click en Si,Eliminar
+
+![](images/clipboard-2172701763.png)
+
+## 7. Módulo de Lecciones (Lessons)
+
+Permite gestionar lecciones dentro de módulos.
+
+### 7.1 Listar Lecciones (Getall)
+
+Acceso: Menú lateral → Lessons
+
+#### Captura 7.1.1: Vista de listado de lecciones
+
+![](images/clipboard-2058855615.png)
+
+Campos: ID, Nombre, Contenido, Tipo de contenido, Fecha disponible, Orden, URL de recurso, Módulo
+
+### 7.2 Crear Lección (Create)
+
+#### Captura 7.2.1: Formulario de creación de lección
+
+![](images/clipboard-1259259866.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-78874833.png)
+
+Campos principales:
+
+-   Nombre, Contenido
+
+<!-- -->
+
+-   Tipo de contenido: Texto/Video/PDF/Enlace externo/Quiz/Documento
+
+<!-- -->
+
+-   Módulo (selector)
+
+<!-- -->
+
+-   Orden, Fecha disponible, URL de recurso
+
+### 7.3 Editar Lección (Update)
+
+#### Captura 7.3.1: Formulario de edición
+
+![](images/clipboard-3421415061.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-2011410429.png)
+
+### 7.4 Eliminar Lección (Delete)
+
+#### Captura 7.4.1: Confirmación de eliminación
+
+![](images/clipboard-2023181607.png)
+
+Dar click en Si,eliminar.
+
+![](images/clipboard-812666620.png)
+
+## 8. Módulo de Evaluaciones (Evaluations)
+
+Permite gestionar evaluaciones (exámenes, quizzes, tareas) vinculadas a lecciones.
+
+### 8.1 Listar Evaluaciones (Getall)
+
+Acceso: Menú lateral → Evaluations
+
+#### Captura 8.1.1: Vista de listado de evaluaciones
+
+![](images/clipboard-2688755333.png)
+
+Campos: ID, Título, Descripción, Tipo (Exam/Quiz/Assignment), Puntuación máxima, Fecha límite, Lección
+
+### 8.2 Crear Evaluación (Create)
+
+#### Captura 8.2.1: Formulario de creación de evaluación
+
+![](images/clipboard-1964146700.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-2747911251.png)
+
+Campos:
+
+-   Título, Descripción
+
+<!-- -->
+
+-   Tipo: Exam/Quiz/Assignment
+
+<!-- -->
+
+-   Lección (selector)
+
+<!-- -->
+
+-   Puntuación máxima, Puntuación mínima
+
+<!-- -->
+
+-   Fecha límite, Disponible desde, Disponible hasta
+
+<!-- -->
+
+-   Intentos permitidos
+
+<!-- -->
+
+-   Mostrar resultados
+
+### 8.3 Editar Evaluación (Update)
+
+#### Captura 8.3.1: Formulario de edición
+
+![](images/clipboard-2158218013.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-45804455.png)
+
+### 8.4 Eliminar Evaluación (Delete)
+
+#### Captura 8.4.1: Confirmación de eliminación
+
+![](images/clipboard-3947137787.png)
+
+Dar click en Si,Eliminar.
+
+![](images/clipboard-3411105200.png)
+
+## 9. Módulo de Intentos (Attempts)
+
+Registra los intentos de estudiantes en evaluaciones.
+
+### 9.1 Listar Intentos (Getall)
+
+Acceso: Menú lateral → Attempts
+
+#### Captura 9.1.1: Vista de listado de intentos
+
+![](images/clipboard-3417573619.png)
+
+Campos: ID, Fecha intento, Número intento, Estado, Puntuación obtenida, Evaluación, Estudiante
+
+### 9.2 Crear Intento (Create)
+
+#### Captura 9.2.1: Formulario de creación de intento
+
+![](images/clipboard-20919026.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-502053038.png)
+
+Campos:
+
+-   Evaluación (selector)
+
+<!-- -->
+
+-   Estudiante (selector)
+
+<!-- -->
+
+-   Fecha intento
+
+<!-- -->
+
+-   Número intento
+
+<!-- -->
+
+-   Estado: EN PROGRESO/COMPLETADO/CALIFICADO
+
+<!-- -->
+
+-   Hora inicio, Hora fin, Tiempo dedicado
+
+<!-- -->
+
+-   Puntuación obtenida
+
+<!-- -->
+
+-   Respuestas (JSON)
+
+### 9.3 Editar Intento (Update)
+
+#### Captura 9.3.1: Formulario de edición
+
+![](images/clipboard-2083278872.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-514969524.png)
+
+### 9.4 Eliminar Intento (Delete)
+
+#### Captura 9.4.1: Confirmación de eliminación
+
+![](images/clipboard-3688964511.png)
+
+Dar click en Si,Eliminar.
+
+![](images/clipboard-2051190080.png)
+
+## 10. Módulo de Entregas (Deliveries)
+
+Define entregas/tareas vinculadas a lecciones.
+
+### 10.1 Listar Entregas (Getall)
+
+Acceso: Menú lateral → Deliveries
+
+#### Captura 10.1.1: Vista de listado de entregas
+
+![](images/clipboard-3128448530.png)
+
+Campos: ID, Título, Descripción, Fecha límite, Lección
+
+### 10.2 Crear Entrega (Create)
+
+#### Captura 10.2.1: Formulario de creación de entrega
+
+![](images/clipboard-259261668.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-1177842380.png)
+
+Campos: Título, Descripción, Lección (selector), Fecha límite
+
+### 10.3 Editar Entrega (Update)
+
+#### Captura 10.3.1: Formulario de edición
+
+![](images/clipboard-786037677.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-158929358.png)
+
+### 10.4 Eliminar Entrega (Delete)
+
+#### Captura 10.4.1: Confirmación de eliminación
+
+![](images/clipboard-1179606794.png)
+
+Dar click en Si,Eliminar.
+
+![](images/clipboard-1713593604.png)
+
+## 11. Módulo de Entregas de Estudiantes (Student Deliveries)
+
+Gestiona las entregas realizadas por estudiantes.
+
+### 11.1 Listar Entregas de Estudiantes (Getall)
+
+Acceso: Menú lateral → Student Deliveries
+
+#### Captura 11.1.1: Vista de listado
+
+![](images/clipboard-356812033.png)
+
+Campos: ID, Fecha entrega, Archivo, Calificación, Estado, Entrega, Estudiante
+
+### 11.2 Crear Entrega de Estudiante (Create)
+
+#### Captura 11.2.1: Formulario de creación
+
+![](images/clipboard-3135582363.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-1552884448.png)
+
+Campos:
+
+-   Entrega (selector)
+
+<!-- -->
+
+-   Estudiante (selector)
+
+<!-- -->
+
+-   Fecha entrega
+
+<!-- -->
+
+-   Archivo (URL/ruta)
+
+<!-- -->
+
+-   Calificación
+
+<!-- -->
+
+-   Estado: CALIFICADO/PENDIENTE/DEVUELTA
+
+### 11.3 Editar Entrega de Estudiante (Update)
+
+#### Captura 11.3.1: Formulario de edición
+
+![](images/clipboard-4181354071.png)
+
+Dar click en Guardar.
+
+![](images/clipboard-500629961.png)
+
+### 11.4 Eliminar Entrega de Estudiante (Delete)
+
+#### Captura 11.4.1: Confirmación de eliminación
+
+![](images/clipboard-1194235400.png)
+
+Dar click en Si,Eliminar.
+
+![](images/clipboard-245755925.png)
+
+## 12. Módulo de Inscripciones (Registrations)
+
+Gestiona la inscripción de estudiantes en cursos.
+
+### 12.1 Listar Inscripciones (Getall)
+
+Acceso: Menú lateral → Registrations
+
+#### Captura 12.1.1: Vista de listado de inscripciones
+
+![](images/clipboard-130509049.png)
+
+Campos: ID, Fecha inscripción, Estado, Calificación final, Certificado emitido, Progreso, Estudiante, Curso
+
+### 12.2 Crear Inscripción (Create)
+
+#### Captura 12.2.1: Formulario de creación de inscripción
+
+![](images/clipboard-1239485271.png)Dar click en Guardar.
+
+![](images/clipboard-193989221.png)
+
+Campos:
+
+-   Estudiante (selector)
+
+<!-- -->
+
+-   Curso (selector)
+
+<!-- -->
+
+-   Fecha inscripción
+
+<!-- -->
+
+-   Estado: active/completed/cancelled
+
+<!-- -->
+
+-   Progreso (porcentaje)
+
+<!-- -->
+
+-   Calificación final
+
+<!-- -->
+
+-   Certificado emitido
+
+### 12.3 Editar Inscripción (Update)
+
+#### Captura 12.3.1: Formulario de edición
+
+![](images/clipboard-3568766406.png)Dar click en Guardar.
+
+![](images/clipboard-4184298044.png)
+
+### 12.4 Eliminar Inscripción (Delete)
+
+#### Captura 12.4.1: Confirmación de eliminación
+
+![](images/clipboard-1813657982.png)Dar click en Si,Eliminar.
+
+![](images/clipboard-3246540239.png)
+
+## 13. Módulo de Etiquetas (Tags)
+
+Gestiona etiquetas para categorizar cursos.
+
+### 13.1 Listar Etiquetas (Getall)
+
+Acceso: Menú lateral → Tags
+
+#### Captura 13.1.1: Vista de listado de etiquetas
+
+![](images/clipboard-543116668.png)
+
+Campos: ID, Nombre
+
+### 13.2 Crear Etiqueta (Create)
+
+#### Captura 13.2.1: Formulario de creación de etiqueta
+
+![](images/clipboard-3591594743.png)Dar click en Guardar.
+
+![](images/clipboard-391357938.png)
+
+Campo único: Nombre
+
+### 13.3 Editar Etiqueta (Update)
+
+#### Captura 13.3.1: Formulario de edición
+
+![](images/clipboard-2759562641.png)Dar click en Guardar.
+
+![](images/clipboard-348999903.png)
+
+### 13.4 Eliminar Etiqueta (Delete)
+
+#### Captura 13.4.1: Confirmación de eliminación
+
+![](images/clipboard-1654898998.png)Dar click en Si,Eliminar
+
+![](images/clipboard-847304083.png)
+
+## 14. Módulo de Foros (Forums)
+
+Gestiona foros de discusión vinculados a cursos.
+
+### 14.1 Listar Foros (Getall)
+
+Acceso: Menú lateral → Forums
+
+#### Captura 14.1.1: Vista de listado de foros
+
+![](images/clipboard-549010300.png)
+
+Campos: ID, Título, Descripción, Tipo, Fecha, Moderado, Activo, Curso
+
+### 14.2 Crear Foro (Create)
+
+#### Captura 14.2.1: Formulario de creación de foro
+
+![](images/clipboard-2771103669.png)
+
+Dar click en Guardar.\
+![](images/clipboard-1253412046.png)
+
+Campos:
+
+-   Título, Descripción
+
+<!-- -->
+
+-   Curso (selector)
+
+<!-- -->
+
+-   Tipo: GENERAL/PREGUNTA/PROJECTOS/SOCIAL
+
+<!-- -->
+
+-   Moderado, Activo
+
+### 14.3 Editar Foro (Update)
+
+#### Captura 14.3.1: Formulario de edición
+
+![](images/clipboard-1085054447.png)Dar click en Guardar.
+
+![](images/clipboard-2335674312.png)
+
+### 14.4 Eliminar Foro (Delete)
+
+#### Captura 14.4.1: Confirmación de eliminación
+
+![](images/clipboard-548781667.png)Dar click en Si,Eliminar.
+
+![](images/clipboard-283776397.png)
+
+Nota: Al eliminar un foro, se eliminan todas las publicaciones relacionadas.
+
+## 15. Módulo de Publicaciones (Posts)
+
+Gestiona publicaciones/mensajes en foros.
+
+### 15.1 Listar Publicaciones (Getall)
+
+Acceso: Menú lateral → Posts
+
+#### Captura 15.1.1: Vista de listado de publicaciones
+
+![](images/clipboard-4260876120.png)
+
+Campos: ID, Contenido, Fecha publicación, Es pregunta, Respuesta aceptada, Votos positivos, Votos negativos, Foro, Estudiante/Profesor
+
+### 15.2 Crear Publicación (Create)
+
+#### Captura 15.2.1: Formulario de creación de publicación
+
+![](images/clipboard-1738306816.png)
+
+Campos:
+
+-   Foro (selector)
+
+<!-- -->
+
+-   Estudiante (selector, opcional)
+
+<!-- -->
+
+-   Profesor (selector, opcional)
+
+<!-- -->
+
+-   Publicación padre (para respuestas, opcional)
+
+<!-- -->
+
+-   Contenido
+
+<!-- -->
+
+-   Es pregunta, Respuesta aceptada
+
+<!-- -->
+
+-   URL adjunto
+
+<!-- -->
+
+-   Moderado
+
+### 15.3 Editar Publicación (Update)
+
+#### Captura 15.3.1: Formulario de edición
+
+![](images/clipboard-3495712329.png)Dar click en Guardar.
+
+![](images/clipboard-3636631242.png)
+
+### 15.4 Eliminar Publicación (Delete)
+
+#### Captura 15.4.1: Confirmación de eliminación
+
+![](images/clipboard-2165978150.png)Dar click en Si,Eliminar.
+
+![](images/clipboard-2144268457.png)
+
+## 16. Recomendaciones y Buenas Prácticas
+
+### Validación de datos
+
+-   Completa todos los campos obligatorios
+
+<!-- -->
+
+-   Revisa fechas (inicio antes que fin)
+
+<!-- -->
+
+-   Verifica relaciones (curso debe existir antes de crear módulo)
+
+### Navegación
+
+-   Usa el menú lateral para navegar
+
+<!-- -->
+
+-   Usa los botones de acción en cada fila (editar/eliminar)
+
+<!-- -->
+
+-   Usa la paginación para listas largas
+
+### Seguridad de datos
+
+-   Confirma antes de eliminar registros
+
+<!-- -->
+
+-   Revisa que los datos sean correctos antes de guardar
+
+<!-- -->
+
+-   Ten en cuenta que las eliminaciones pueden afectar registros relacionados (CASCADE)
+
+### Trabajo eficiente
+
+-   Ordena las tablas para encontrar información rápidamente
+
+<!-- -->
+
+-   Usa filtros cuando estén disponibles
+
+<!-- -->
+
+-   Guarda los cambios con frecuencia
+
+## 17. Solución de Problemas
+
+### Problema: No se guardan los datos
+
+Solución: Verifica que todos los campos obligatorios estén completos. Revisa mensajes de error en la parte superior de la pantalla.
+
+### Problema: No aparecen datos en selectores
+
+Solución: Asegúrate de haber creado primero los registros relacionados (por ejemplo, crear profesores antes de asignarlos a cursos).
+
+### Problema: Error al eliminar
+
+Solución: Verifica que el registro no tenga relaciones dependientes que impidan su eliminación.
+
+### Problema: La tabla está vacía
+
+Solución: Si hay datos, revisa el filtro de paginación. Si no hay datos, crea el primer registro usando el botón "Nuevo".
